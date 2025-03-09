@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { Blocks, GripVertical, Cuboid } from 'lucide-react';
+import { useRouter } from "next/router";
 
 const DraggableList = ({ blocks, handleDragStart }) => {
+  const { basePath } = useRouter();
+
   return (
     <div className="draggable-list">
       <div className="draggable-container">
@@ -21,7 +24,7 @@ const DraggableList = ({ blocks, handleDragStart }) => {
                   <div className="drag-content">
                     {item.src && ( 
                       <Image
-                        src={item.src}
+                        src={`${basePath}/${item.src}`}
                         width={30}
                         height={30}
                         alt={item.label}

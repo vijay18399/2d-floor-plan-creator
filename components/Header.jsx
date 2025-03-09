@@ -5,9 +5,9 @@ import { useCanvas } from "@/context/CanvasContext";
 import { useRouter } from "next/router";
 
 export default function Header() {
+  const router = useRouter();
   const [isExpanded, setIsExpanded] = useState(false);
   const { canvas } = useCanvas(); 
-  const router = useRouter()
   const AboutPage  = () => {
     router.push('/about')
   }
@@ -55,7 +55,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-left">
-        <Image width={30} height={30} src="/images/logo.png" alt="Logo" />
+        <Image width={30} height={30} src={`${router.basePath}/images/logo.png`} alt="Logo" />
         <h1 className="header-title">2D Floor Plan Creator</h1>
       </div>
 
