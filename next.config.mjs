@@ -7,6 +7,9 @@ const nextConfig = {
   output: "export",
   basePath: "/2d-floor-plan-creator", 
   assetPrefix: "/2d-floor-plan-creator/",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
