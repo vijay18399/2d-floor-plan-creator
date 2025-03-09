@@ -13,7 +13,7 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
@@ -39,4 +39,263 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #DEEBF2;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #B5D1DB;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #50a6c5;
+}
+
+
+/* Header Styles */
+.header {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #00796B, #4CAF50);
+    padding: 12px 20px;
+}
+
+/* Left Section */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; /* White text for contrast */
+  margin: 0;
+}
+
+/* Right Section */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Icon Buttons */
+.header-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-button svg {
+  color: white;
+  width: 22px;
+  height: 22px;
+}
+
+.header-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.header-button:active {
+  transform: scale(0.95);
+}
+/* header styles */
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.layout {
+  display: flex;
+}
+
+/* Main Draggable List Container */
+.draggable-list {
+  width: 280px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 100vh;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+/* Title (Main Header) */
+.draggable-title {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #2c3e50;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid #f2ecec;
+}
+
+.draggable-title svg {
+  color: #4b8fe3;
+  width: 22px;
+  height: 22px;
+}
+
+/* Category Container */
+.draggable-container {
+  padding: 10px 0;
+}
+
+/* Category Section */
+.draggable-category {
+  margin-bottom: 15px;
+  padding: 8px;
+  background: white;
+  border-radius: 6px;
+}
+
+/* Category Title (Each Heading) */
+.draggable-category-title {
+  font-size: 16px;
+    font-weight: bold;
+    color: #34495e;
+    padding: 8px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    border-bottom: 1px solid #c8cade;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Draggable Items */
+.draggable-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.draggable-item {
+  cursor: grab;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    transition: background .2s, transform .1s;
+    border: 1px solid #f1eded;
+
+}
+.drag-content{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  
+}
+.draggable-item:hover {
+  background: #d2e6f0;
+}
+
+.draggable-image {
+  border-radius: 4px;
+}
+
+.draggable-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2C3E50;
+}
+
+
+
+.about-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.about-description {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.about-section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 10px;
+}
+
+.about-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  color: #444;
+  padding: 5px 0;
+}
+
+.about-note {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 20px;
+  font-style: italic;
+}
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background-color: #85BAE4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: max-content;
+}
+
+.back-button:hover {
+  background-color: #5F9ED8;
 }
