@@ -8,7 +8,7 @@ export async function addDraggedItem(canvas){
     const item = JSON.parse(event.dataTransfer.getData("item"));
     const pointer = canvas.getPointer(event);
     if (item.src) {
-      const img = await FabricImage.fromURL(item.src);
+      const img = await FabricImage.fromURL("/2d-floor-plan-creator/"+item.src);
       if (!img) return;
       img.set({
         scaleX: item.scale,
